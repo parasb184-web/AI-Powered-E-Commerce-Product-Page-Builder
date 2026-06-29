@@ -20,7 +20,7 @@ export default function Dashboard() {
         const data = await res.json();
         setProducts(data);
       } catch (err) {
-        console.error(err);
+        console.warn("Fetch error:", err);
         setError("Could not connect to the backend server. Make sure it is running.");
       } finally {
         setLoading(false);
